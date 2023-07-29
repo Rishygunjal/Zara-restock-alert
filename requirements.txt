@@ -3,4 +3,4 @@ pywhatkit
 datetime
 selenium
 twilio
-dotenv
+python-dotenv
