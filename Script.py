@@ -21,7 +21,7 @@ def your_task():
         "/html/body/div[1]/div[1]/div[1]/div/div/div[2]/main/article/div/div/div[2]/div/div[3]")
     print(button.text)
     now = datetime.datetime.now()
-    now = now + datetime.timedelta(minutes=1)
+    now = now + datetime.timedelta(minutes=2)
     print(now.hour, now.minute)
 
     pywhatkit.sendwhatmsg("+919175418951", button.text, now.hour, now.minute)
@@ -88,7 +88,7 @@ url2 = "https://www.zara.com/in/en/refill-bronzing-powder-p24130836.html?v1=2776
 
 while True:
     your_task()
-    time.sleep(60)  # Sleep for 1 hour (3600 seconds)
+    time.sleep(3600)  # Sleep for 1 hour (3600 seconds)
 
 # finally:
     # Close the browser window
