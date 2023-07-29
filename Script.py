@@ -11,6 +11,14 @@ import datetime
 from selenium.webdriver.chrome.options import Options
 import time
 
+from twilio.rest import Client
+
+account_sid = 'ACc8d4c3ce0323020a4780104867bf8183'
+auth_token = '54f0ade3d768ed01c3b363944effe51d'
+client = Client(account_sid, auth_token)
+
+
+
 
 def your_task():
     # Replace this with the code for your task
@@ -24,7 +32,15 @@ def your_task():
     now = now + datetime.timedelta(minutes=2)
     print(now.hour, now.minute)
 
-    pywhatkit.sendwhatmsg("+919175418951", button.text, now.hour, now.minute)
+    # pywhatkit.sendwhatmsg("+919175418951", button.text, now.hour, now.minute)
+    message = client.messages.create(
+        from_='whatsapp:+14155238886',
+        body=button.text,
+        to='whatsapp:+919657413031'
+    )
+
+
+    print(message.sid)
 
     # You can add more actions here, like clicking on elements, filling out forms, etc.
 
