@@ -12,10 +12,24 @@ from selenium.webdriver.chrome.options import Options
 import time
 
 from twilio.rest import Client
+# Import required libraries
+import os
+from dotenv import load_dotenv
 
-account_sid = 'ACc8d4c3ce0323020a4780104867bf8183'
-auth_token = '54f0ade3d768ed01c3b363944effe51d'
-client = Client(account_sid, auth_token)
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the password from the environment variable
+
+
+# Use the password in your code
+# For example, you might use it to authenticate to a service:
+# authenticate(username, password)
+
+# account_sid = 'ACc8d4c3ce0323020a4780104867bf8183'
+# auth_token = '54f0ade3d768ed01c3b363944effe51d'
+
+client = Client(os.getenv("account_sid"), os.getenv("auth_token"))
 
 
 
@@ -36,7 +50,7 @@ def your_task():
     message = client.messages.create(
         from_='whatsapp:+14155238886',
         body=button.text,
-        to='whatsapp:+919657413031'
+        to='whatsapp:+919175418951'
     )
 
 
