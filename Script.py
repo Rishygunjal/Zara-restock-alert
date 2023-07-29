@@ -13,10 +13,10 @@ import time
 from twilio.rest import Client
 # Import required libraries
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 # Load environment variables from .env file
-load_dotenv()
+# load_dotenv()
 
 # Access the password from the environment variable
 
