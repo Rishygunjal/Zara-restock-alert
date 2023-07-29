@@ -96,8 +96,7 @@ while True:
 
 
 # user_name = driver.find_element_by_id("username")
-# pw = driver.find_element_by_id("password
-# ")
+# pw = driver.find_element_by_id("password")
 
 # user_name.send_keys(USERNAME)
 # pw.send_keys(PASSWORD)
