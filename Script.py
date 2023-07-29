@@ -6,7 +6,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 import json
 import re
-import pywhatkit
 import datetime
 from selenium.webdriver.chrome.options import Options
 import time
